@@ -11,7 +11,20 @@ export const appRoutes: Route[] = [
       },
       {
         path: 'employees',
-        loadComponent: () => import('./pages/employees/employees.component'),
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./pages/employees/employees.component'),
+          },
+          {
+            path: 'create',
+            loadComponent: () =>
+              import(
+                './pages/employees/create-employee/create-employee.component'
+              ),
+          },
+        ],
       },
     ],
   },
