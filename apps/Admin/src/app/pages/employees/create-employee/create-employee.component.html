@@ -52,7 +52,7 @@
                             </div>
                             <div  class="col-md-6 col-12">
                                 <div class="form-group mt-2">
-                                    <label>Email</label>
+                                    <label>Email <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" [(ngModel)]="data().personnelInformation.email" name="email" required>
                                     <div class="invalid-feedback">Geçerli bir email girin</div>
                                 </div>
@@ -66,7 +66,7 @@
                             </div>
                             <div  class="col-md-6 col-12">
                                 <div class="form-group mt-2">
-                                    <label>Telefon Numarası 2 <span class="text-danger">*</span></label>
+                                    <label>Telefon Numarası 2</label>
                                     <input type="text" class="form-control" [(ngModel)]="data().personnelInformation.phone2" name="phone2" prefix="0" mask="(999) 999 9999">
                                 </div>
                             </div>

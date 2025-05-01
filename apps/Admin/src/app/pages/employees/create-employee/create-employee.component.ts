@@ -31,13 +31,13 @@ import { Location } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class CreateEmployeeComponent {
-  data = signal<EmployeeModel>(new EmployeeModel());
-  loading = signal<boolean>(false);
+  readonly data = signal<EmployeeModel>(new EmployeeModel());
+  readonly loading = signal<boolean>(false);
 
-  #breadcrumb = inject(BreadcrumbService);
-  #http = inject(HttpClient);
-  #toast = inject(FlexiToastService);
-  #location = inject(Location);
+  readonly #breadcrumb = inject(BreadcrumbService);
+  readonly #http = inject(HttpClient);
+  readonly #toast = inject(FlexiToastService);
+  readonly #location = inject(Location);
 
   constructor() {
     this.#breadcrumb.reset();

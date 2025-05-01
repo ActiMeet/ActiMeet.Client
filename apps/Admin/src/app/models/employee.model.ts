@@ -6,6 +6,15 @@ export class EmployeeModel {
   salary: number = 0;
   personnelInformation: PersonnelInformation = new PersonnelInformation();
   address: Address = new Address();
+  createAt: string = '';
+  updateAt: string = '';
+  updateUserId: string = '';
+  updateUserName: string = '';
+  deleteAt: string = '';
+  deleteUserId: string = '';
+  deleteUserName: string = '';
+  isActive: boolean = true;
+  isDeleted: boolean = false;
 }
 
 export class PersonnelInformation {
