@@ -24,6 +24,11 @@ export const appRoutes: Route[] = [
                 './pages/employees/create-employee/create-employee.component'
               ),
           },
+          {
+            path: 'detail/:id',
+            loadComponent: () =>
+              import('./pages/employees/detail/detail.component'),
+          },
         ],
       },
     ],

@@ -1,1 +1,34 @@
-<p>detail works!</p>
+<app-blank pageTitle="Çalışan Detay">
+    <div class="container py-5">
+        <div class="card shadow p-4 d-flex align-items-center justift-content-between">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="label-text">İsim</div>
+                    <div class="info-text">{{data()?.firstName}}</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="label-text">Soyisim</div>
+                    <div class="info-text">{{data()?.lastName}}</div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="label-text">E-posta</div>
+                    <div class="info-text">{{data()?.personnelInformation?.email}}</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="label-text">Telefon</div>
+                    <div class="info-text">{{data()?.personnelInformation?.phone1}}</div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="label-text">Maaş</div>
+                    <div class="info-text">{{data()?.salary}}</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="label-text">T.C. Kimlik No</div>
+                    <div class="info-text">{{data()?.personnelInformation?.identityNumber}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-blank>
