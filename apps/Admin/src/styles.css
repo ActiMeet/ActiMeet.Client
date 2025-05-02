@@ -21,3 +21,7 @@
 .flexi-swal-title-container{
     font-size: 25px;
 }
+
+a{
+    text-decoration: none !important;
+}
