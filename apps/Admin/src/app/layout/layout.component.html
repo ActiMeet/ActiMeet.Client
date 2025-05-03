@@ -133,7 +133,7 @@
                 class="user-image rounded-circle shadow"
                 alt="User Image"
               />
-              <span class="d-none d-md-inline">Alexander Pierce</span>
+              <span class="d-none d-md-inline">{{user() || "Giriş yapmadınız."}}</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
               <li class="user-header text-bg-primary">
@@ -142,10 +142,7 @@
                   class="rounded-circle shadow"
                   alt="User Image"
                 />
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2023</small>
-                </p>
+                <p>{{user() || "Giriş yapmadınız."}}</p>
               </li>
               <li class="user-body">
                 <a class="btn btn-danger w-100" (click)="logout()">Çıkış Yap</a>
