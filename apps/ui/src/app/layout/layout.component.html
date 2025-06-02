@@ -1,3 +1,62 @@
-<p>layout works!</p>
+<div class="d-flex flex-column min-vh-100">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+     <div class="d-flex align-items-center">
+        <!-- LOGO -->
+        <img
+        src="assets/img/actimeetlogo.png"
+        alt="ActiMeet Logo"
+        class="rounded-circle me-3"
+        width="40"
+        height="40"
+        />
+    </div>
 
-<router-outlet></router-outlet>
+    <!-- SEARCHBAR -->
+    <div class="flex-grow-1">
+      <form class="d-flex justify-content-center">
+        <input class="form-control w-50 me-1" type="search" placeholder="Ara..." />
+        <button class="btn btn-outline-light">
+            <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="d-flex align-items-center ms-auto">
+      <button class="btn btn-outline-light">Giriş Yap</button>
+    </div>
+  </nav>
+
+  <!-- BODY -->
+  <div class="d-flex flex-grow-1">
+    <!-- MAIN CONTENT -->
+    <div class="flex-grow-1 p-4 main-content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="border-start bg-light p-3" style="width: 300px;">
+      <h5 class="mb-3 online-user-title">Online Kullanıcılar</h5>
+
+      <div *ngFor="let user of onlineUsers" class="card mb-2 shadow-sm">
+        <div class="card-body d-flex align-items-center p-2">
+          <img
+            [src]="user.avatar"
+            alt="avatar"
+            class="rounded-circle me-2"
+            width="40"
+            height="40"
+          />
+        <div class="d-flex align-items-center">
+            <span class="me-2">{{ user.username }}</span>
+            <span
+                class="status-dot"
+                [ngClass]="user.isOnline ? 'online' : 'offline'"
+            ></span>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

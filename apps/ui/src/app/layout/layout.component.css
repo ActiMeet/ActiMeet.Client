@@ -1,0 +1,40 @@
+.card-body {
+  transition: background-color 0.2s;
+}
+
+.card-body:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.navbar input[type="search"] {
+  max-width: 500px;
+}
+
+.main-content {
+  background-color: #fdfdfd;
+}
+
+.main-content > div {
+  margin-top: 40px;
+}
+
+
+.online-user-title{
+    text-align: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.online {
+  background-color: #28a745;
+}
+
+.offline {
+  background-color: #dc3545;
+}
